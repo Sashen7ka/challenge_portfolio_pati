@@ -5,7 +5,7 @@ from pages.base_page import BasePage
 
 class Dashboard(BasePage):
   expected_title = "Scouts panel"
-  dashboard_url = 'https://scouts-test.futbolkolektyw.pl/en'
+  dashboard_url = "https://scouts-test.futbolkolektyw.pl/en"
   main_page_xpath = "//span[text()='Main page']"
   players_xpath = "//div[contains(@class,'MuiListItemText-root jss29 jss55')]"
   polski_xpath = "//ul[2]/div[1]/div[2]/span"
@@ -19,6 +19,5 @@ class Dashboard(BasePage):
   shortcuts_xpath = "//main/div[3]/div[2]/div/div/h2"
 
   def title_of_page(self):
-    time.sleep(6)
+    time.sleep(5)
     assert self.get_page_title(self.dashboard_url) == self.expected_title
-  pass
