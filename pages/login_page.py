@@ -17,6 +17,7 @@ class LoginPage(BasePage):
       language_dropdown_xpath = "//div[2]/div/div"
       polish_language_xpath = "//div[3]/ul/li[1]"
       english_language_xpath = "//div[3]/ul/li[2]"
+      user_login = "user01@getnada.com"
 
       def type_in_email(self, email):
         self.field_send_keys(self.login_field_xpath, email)
@@ -47,9 +48,3 @@ class LoginPage(BasePage):
       def check_remind_page_title(self):
           self.assert_element_text(self.driver, self.remind_password_header_xpath, self.expected_remind_page_header)
 
-      def select_language(self):
-          self.click_on_the_element(self.language_dropdown_xpath)
-          if polish_language_xpath == "polish"
-            self.click_on_the_element(self.polish_language_xpath)
-          else:
-            self.click_on_the_element(self.english_language_xpath)

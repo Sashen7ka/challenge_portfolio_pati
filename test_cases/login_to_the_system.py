@@ -14,6 +14,12 @@ from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 class TestLoginPage(unittest.TestCase):
 
+
+
+    def __init__(self, methodName: str = ...):
+        super().__init__(methodName)
+        self.user_login = None
+
     @classmethod
     def setUp(self):
         os.chmod(DRIVER_PATH, 755)
@@ -36,11 +42,8 @@ class TestLoginPage(unittest.TestCase):
         dashboard_page.title_of_page()
         time.sleep(5)
 
-    @classmethod
-    def tearDown(self):
-        self.driver.quit()
 
-    def test_log_in_to_the_system(self):
+    def test_login_to_the_system(self):
        self.user_login.title_of_page()
        self.user_login.title_of_header()
        self.user_login.do_login('user01@getnada.com', 'Test-1234')
@@ -72,6 +75,9 @@ class TestLoginPage(unittest.TestCase):
         self.user_login.check_remind_page_title()
         self.user_ligin.type_in_email('user01@getnada.com')
 
+    @classmethod
+    def tearDown(self):
+        self.driver.quit()
 
 
 

@@ -2,13 +2,13 @@
 
 
 class AddPlayerPage(BasePage):
-    add_player_page_url = ('https://scouts-test.futbolkolektyw.pl/en/players')
-    player_name_field_xpath = "//div[1]/div/div/input"
-    player_surname_field_xpath = "//div[3]/div/div/input"
-    main_position_field_xpath = "//div[11]/div/div/input"
-    player_age_field_xpath = "//div[7]/div/div/input"
-    edit_player_header_xpath = "Add player"
-    submit_button_xpath =  "//form/div[3]/button[1]"
+      add_player_page_url = ('https://scouts-test.futbolkolektyw.pl/en/players')
+      player_name_field_xpath = "//div[1]/div/div/input"
+      player_surname_field_xpath = "//div[3]/div/div/input"
+      main_position_field_xpath = "//div[11]/div/div/input"
+      player_age_field_xpath = "//div[7]/div/div/input"
+      edit_player_header_xpath = "Add player"
+      submit_button_xpath =  "//form/div[3]/button[1]"
 
 
     def type_to_name(self,name):
